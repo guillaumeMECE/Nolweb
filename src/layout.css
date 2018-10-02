@@ -1,0 +1,59 @@
+body {margin:0;}
+
+*{
+   box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 0.5em;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #AAA;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: #FFF;
+}
+
+.active {
+   color: #FFF;
+   border-bottom: 0.2em #FFF solid;
+}
+
+.responsiveDiv{
+   width: 100%;
+   margin-top: 5em;
+}
+
+.left{
+   background-color: yellow;
+   width: 30%;
+   float: left;
+   
+}
+.main{
+   background-color: orange;
+   width: 30%;
+   float: left;
+}
+.right{
+   background-color: red;
+   width: 30%;
+   float: left;
+}
