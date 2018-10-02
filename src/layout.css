@@ -1,4 +1,7 @@
-body {margin:0;}
+body {
+   margin:0;
+background-color: white;
+}
 
 *{
    box-sizing: border-box;
@@ -9,7 +12,7 @@ ul {
     margin: 0;
     padding-top: 0.5em;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000;
     position: fixed;
     top: 0;
     width: 100%;
@@ -34,6 +37,8 @@ li a:hover:not(.active) {
 .active {
    color: #FFF;
    border-bottom: 0.2em #FFF solid;
+   border-bottom-left-radius: 0.1em;
+   border-bottom-right-radius: 0.1em;
 }
 
 .responsiveDiv{
@@ -41,19 +46,44 @@ li a:hover:not(.active) {
    margin-top: 5em;
 }
 
-.left{
-   background-color: yellow;
-   width: 30%;
-   float: left;
-   
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    background-color: white;
+    float: left;
 }
-.main{
-   background-color: orange;
-   width: 30%;
-   float: left;
+
+.card:hover {
+    box-shadow: 0 1em 1.4em 0 rgba(0,0,0,0.2);
 }
-.right{
-   background-color: red;
-   width: 30%;
+
+.container {
+    padding: 0.5em 1em;
+}
+
+#logo{
    float: left;
+   margin: 0 1em 0 0;
+   padding: 0;
+}
+
+#card1{
+   background-color: #FFC164;
+}
+#card2{
+   background-color: #FF9666;
+}
+#card3{
+   background-color: #FE3845;
+}
+
+h4{
+   font-family: 'Roboto', sans-serif;
+   font-size: 2vw;
+}
+p{
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.5vw;
 }
