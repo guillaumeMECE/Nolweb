@@ -9,6 +9,11 @@ function googleLogin() {
       document.getElementById("userName").textContent = user.displayName;
       document.getElementById("emailAdress").textContent = user.email;
       document.getElementById("googlePic").src = user.photoURL;
+      //document.getElementById("accountLogo").src=Content = user.email;
+      document.getElementById("accountLogo").textContent= " ";
+      document.getElementById("accountLogo").style.width="1em";
+      document.getElementById("accountLogo").style.height="1em";
+      document.getElementById("accountLogo").style.backgroundImage= 'url("'+user.photoURL+'")';
    }).catch(function(error) {
       // Handle Errors
       var errorCode = error.code;
@@ -19,9 +24,6 @@ function googleLogin() {
       console.log(errorCode);
       console.log(errorMessage);
       console.log(email);
-<<<<<<< HEAD
-=======
       alert(errorMessage);
->>>>>>> d8a847d845f15df824cca011fe04c27e638c63a3
    });
 }
