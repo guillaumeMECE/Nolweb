@@ -1,37 +1,40 @@
 body {
-   margin:0;
-background-color: white;
+   margin: 0;
+   background-color: white;
 }
 
-*{
+* {
    box-sizing: border-box;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding-top: 0.5em;
-    overflow: hidden;
-    background-color: #000;
-    position: fixed;
-    top: 0;
-    width: 100%;
+   list-style-type: none;
+   margin: 0;
+   padding-top: 0.5em;
+   overflow: hidden;
+   background-color: #000;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   box-shadow: 0 1em 1.4em 0 rgba(0, 0, 0, 0.2);
 }
 
 li {
-    float: left;
+   float: left;
 }
 
 li a {
-    display: block;
-    color: #AAA;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+   display: block;
+   color: #AAA;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.5vw;
 }
 
 li a:hover:not(.active) {
-    color: #FFF;
+   color: #FFF;
 }
 
 .active {
@@ -41,49 +44,57 @@ li a:hover:not(.active) {
    border-bottom-right-radius: 0.1em;
 }
 
-.responsiveDiv{
+.responsiveDiv {
    width: 100%;
    margin-top: 5em;
 }
 
-
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 30%;
-    background-color: white;
-    float: left;
+   box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.2);
+   transition: 0.3s;
+   width: 30%;
+   background-color: white;
+   float: left;
 }
 
 .card:hover {
-    box-shadow: 0 1em 1.4em 0 rgba(0,0,0,0.2);
+   box-shadow: 0 1em 1.4em 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
-    padding: 0.5em 1em;
+   padding: 0.5em 1em;
 }
 
-#logo{
+img {
+   width: 100%;
+}
+
+#logo {
    float: left;
    margin: 0 1em 0 0;
    padding: 0;
 }
 
-#card1{
+#card1 {
    background-color: #FFC164;
 }
-#card2{
+
+#card2 {
    background-color: #FF9666;
 }
-#card3{
+
+#card3 {
    background-color: #FE3845;
 }
 
-h4{
+h4 {
    font-family: 'Roboto', sans-serif;
    font-size: 2vw;
+   color: white;
 }
-p{
+
+p {
    font-family: 'Roboto', sans-serif;
    font-size: 1.5vw;
+   color: white;
 }
