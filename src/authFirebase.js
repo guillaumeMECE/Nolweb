@@ -19,5 +19,9 @@ function googleLogin() {
       console.log(errorCode);
       console.log(errorMessage);
       console.log(email);
+<<<<<<< HEAD
+=======
+      alert(errorMessage);
+>>>>>>> d8a847d845f15df824cca011fe04c27e638c63a3
    });
 }
