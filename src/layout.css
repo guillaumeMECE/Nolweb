@@ -7,36 +7,54 @@ body {
    box-sizing: border-box;
 }
 
-.material-icons.md-1 { font-size: 1vw; }
-.material-icons.md-2 { font-size: 2vw; } /* Default */
-.material-icons.md-3 { font-size: 3vw; }
-.material-icons.md-4 { font-size: 4vw; }
-
-#accountLogo{
-   color: gray;
-/*margin-right: 2em;*/
-width:100%;
-cursor: default;
-margin-right: 0.3em;
-background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  border-radius:5em;
- /* background-color: #cccccc; /* Used if the image is unavailable */
+.material-icons.md-1 {
+   font-size: 1vw;
 }
-#userName{
+
+.material-icons.md-2 {
+   font-size: 2vw;
+}
+
+/* Default */
+.material-icons.md-3 {
+   font-size: 3vw;
+}
+
+.material-icons.md-4 {
+   font-size: 4vw;
+}
+
+#accountLogo {
+   display: inline-block;
+   margin-top: auto;
+   margin-bottom: auto;
+   color: gray;
+   /*margin-right: 2em;*/
+   width: 100%;
+   cursor: default;
+   margin-right: 0.3em;
+   background-position: center;
+   /* Center the image */
+   background-repeat: no-repeat;
+   /* Do not repeat the image */
+   background-size: cover;
+   border-radius: 5em;
+   /* background-color: #cccccc; /* Used if the image is unavailable */
+}
+
+#userName {
    font-size: 1.2vw;
    text-align: center;
    display: block;
    padding-right: 0.4em;
 }
+
 /*#accountLogo:hover{
    cursor: default;
 }*/
-
 ul {
    list-style-type: none;
-   margin: 0;
+   margin: auto;
    padding-right: 1em;
    padding-top: 0.5em;
    overflow: auto;
@@ -52,10 +70,10 @@ li {
 }
 
 li a {
-   display: block;
+   display: inline-block;
    color: #AAA;
    text-align: center;
-   padding: 14px 1em;
+   padding: 1em 1em;
    text-decoration: none;
    font-family: 'Roboto', sans-serif;
    font-size: 1.5vw;
@@ -98,6 +116,9 @@ img {
 #logo {
    /*margin: 0 1em 0 0;*/
    padding: 0;
+   float: left;
+   display: inline-block;
+   margin: auto;
 }
 
 #card1 {
