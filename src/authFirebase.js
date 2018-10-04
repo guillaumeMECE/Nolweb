@@ -1,4 +1,5 @@
 function googleLogin() {
+   document.getElementById("accountLogo").onclick=null; //evite de clicker plusieur fois dessus
    const provider = new firebase.auth.GoogleAuthProvider();
 
    firebase.auth().signInWithPopup(provider).then(result => {
@@ -25,5 +26,6 @@ function googleLogin() {
       console.log(errorMessage);
       console.log(email);
       alert(errorMessage);
+      document.getElementById("accountLogo").onclick=googleLogin;//reactive le btn en cas d'err
    });
 }
