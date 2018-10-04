@@ -14,14 +14,39 @@
 
 <body>
 
-   <ul>
-      <img src="lib\icoNol.png" alt="Avatar" id="logo" style="width:7%">
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a class="active" href="#home">Home</a></li>
-      <li><i class="material-icons md-4" id="accountLogo" onclick="googleLogin()">account_circle</i></li>
-      <li><p id="userName"></p></li>
-   </ul>
+
+
+   <div class="flex-zone">
+      <div class="flex-container">
+         <div><a href="#contact">Contact</a></div>
+         <div><a href="#news">News</a></div>
+         <div><a class="active" href="#home">Home</a></div>
+      </div>
+      <div style="float:left" class="flex-container">
+         <div id="divLogo"><img src="lib\icoNol.png" alt="icoNol" id="logo" style="width:10%"></div>
+         <!--div><a href="#contact">Contact</a></div>
+      <div><a href="#news">News</a></div>
+      <div><a class="active" href="#home">Home</a></div-->
+      </div>
+   </div>
+
+   <!--div class="navbar" id="navbarId">
+   <div class="navbarContent">
+      <div class="imgNavbar">
+         <img src="lib\icoNol.png" alt="icoNol" id="logo" style="width:7%">
+      </div>
+
+      <a href="#contact">Contact</a>
+      <a href="#news">News</a>
+      <a class="active" href="#home">Home</a>
+<div class="imgNavbarAccount">
+      <i class="material-icons md-4" id="accountLogo" onclick="googleLogin()">account_circle</i>
+</div>
+      <p id="userName"></p>
+   </div>
+</div-->
+
+
    <div class="responsiveDiv">
       <div class="card" id="card1">
          <img src="lib\play.jpg" alt="Play" class="pic">
