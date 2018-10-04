@@ -11,58 +11,13 @@
    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <link rel="stylesheet" href="calendarview.css">
+   <link rel="stylesheet" href="reservation.css">
 </head>
 
 <body>
-   <style>
-      div.calendar {
-         max-width: 240px;
-         margin-left: auto;
-         margin-right: auto;
-      }
-
-      div.calendar table {
-         width: 100%;
-      }
-
-      div.dateField {
-         width: 140px;
-         padding: 6px;
-         -webkit-border-radius: 6px;
-         -moz-border-radius: 6px;
-         color: #555;
-         background-color: white;
-         margin-left: auto;
-         margin-right: auto;
-         text-align: center;
-      }
-
-      div#popupDateField:hover {
-         background-color: #cde;
-         cursor: pointer;
-      }
-   </style>
    <script src="/nolweb/src/prototype.js"></script>
    <script src="/nolweb/src/calendarview.js"></script>
-   <script>
-      function setupCalendars() {
-         // Embedded Calendar
-         /*Calendar.setup({
-            dateField: 'embeddedDateField',
-            parentElement: 'embeddedCalendar'
-         })*/
-
-         // Popup Calendar
-         Calendar.setup({
-            dateField: 'popupDateField',
-            triggerElement: 'popupDateField'
-         })
-      }
-
-      Event.observe(window, 'load', function() {
-         setupCalendars()
-      })
-   </script>
+   <script src="/nolweb/src/reservation.js"></script>
 
    <ul>
       <img src="/nolweb/lib/icoNol.png" alt="Avatar" id="logo" style="width:7%">
@@ -79,18 +34,33 @@
       <div class="card" id="cardReservation">
          <!--img src="lib\play.jpg" alt="Play" class="pic"-->
          <div class="container">
-            <div style="float: right; width: 50%">
-
+            <div style="float: left">
                <div id="popupExample">
-                  <div id="popupDateField" class="dateField" style="margin-top: 160px">
+                  <div id="popupDateField" class="dateField">
                      Show Calendar
                   </div>
-
                </div>
             </div>
+            <input type="number" id="horaire" min="10" max="20">
+            <p></p>
+            <button onclick="tstReservation()">Reserver</button>
          </div>
       </div>
    </div>
+
+   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+         apiKey: "AIzaSyCPulMoTiUblUOF4r-46sxgmQkAHEUrz98",
+         authDomain: "nolweb-8d12d.firebaseapp.com",
+         databaseURL: "https://nolweb-8d12d.firebaseio.com",
+         projectId: "nolweb-8d12d",
+         storageBucket: "",
+         messagingSenderId: "366427879385"
+      };
+      firebase.initializeApp(config);
+   </script>
 
 </body>
 

@@ -1,25 +1,21 @@
 function googleLogin() {
-   document.getElementById("accountLogo").onclick = null; //evite de clicker plusieur fois dessus
+   document.getElementById("accountLogo").onclick = null; // evite de clicker plusieur fois dessus
    const provider = new firebase.auth.GoogleAuthProvider();
 
    firebase.auth().signInWithPopup(provider).then(result => {
       // Show user information
       const user = result.user;
       console.log(user);
-      // Change card
-
-
+      // Change card tst
       document.getElementById("emailAdress").textContent = user.email;
       document.getElementById("googlePic").src = user.photoURL;
-      //document.getElementById("accountLogo").src=Content = user.email;
-      initAccountLogo(user);
+      initAccountLogo(user); // logo account refresh with user info
 
-      initDataUser(user);
+      initDataUser(user); // manage multi co
    }).catch(function(error) {
       // Handle Errors
       var errorCode = error.code;
       var errorMessage = error.message;
-      // The email of the user's account used.
       var email = error.email;
       // Show error
       console.log(errorCode);
@@ -40,43 +36,17 @@ function initAccountLogo(user) {
 }
 
 function initDataUser(user) {
-   console.log(user.uid);
-   // Get a reference to the database service
+   // console.log(user.uid);
    var database = firebase.database();
    database.ref('/users/' + user.uid).on('value', function(snapshot) {
-      if (!(snapshot.exists())) {
+      if (!(snapshot.exists())) { // tst si première co ou pas
          const ref = database.ref('/users/' + user.uid);
-         ref.set({
+         ref.set({ // creation et sauvegarde du profil
             username: user.displayName,
             email: user.email,
             photoURL: user.photoURL,
-            membreNol: false
+            membreNol: false // attribut pour la reservation
          });
-      } //else
-         //alert("exist");
+      }
    });
-
-   /*if (database.ref('/users/' + user.uid). != null) {
-      const ref = database.ref('/users/' + user.uid);
-      ref.set({
-         username: user.displayName,
-         email: user.email,
-         photoURL: user.photoURL,
-         membreNol: false
-      });
-   }*/
-
-   /*const ref = database.ref('/users/'+user.uid);
-   ref.push({
-      item: "Get Milk",
-      completed: true,
-      archived: true
-   })*/
-   // save the user's profile into Firebase so we can list users,
-   // use them in Security and Firebase Rules, and show profiles
-   /*database.ref('users').set({
-      username: user.name,
-      email: user.email
-      //some more user data
-   });*/
 }
