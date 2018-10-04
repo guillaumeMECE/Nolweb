@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Nol</title>
+   <link rel="stylesheet" href="layout.css" />
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+   <ul>
+      <img src="/nolweb/lib/icoNol.png" alt="Avatar" id="logo" style="width:7%">
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="active" href="src\reservation.html">News</a></li>
+      <li><a href="/nolweb/index.html">Home</a></li>
+      <li><i class="material-icons md-4" id="accountLogo" onclick="googleLogin()">account_circle</i></li>
+      <li>
+         <p id="userName"></p>
+      </li>
+   </ul>
+
+   <div class="responsiveDiv">
+      <div class="card" id="cardReservation">
+         <img src="lib\play.jpg" alt="Play" class="pic">
+         <div class="container">
+            <h4>Play</h4>
+            <p>Playlist collaborative & Production</p>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>
