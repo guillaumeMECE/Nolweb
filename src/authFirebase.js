@@ -7,14 +7,13 @@ function googleLogin() {
       const user = result.user;
       console.log(user);
       // Change card
-      document.getElementById("userName").textContent = user.displayName;
+
+
       document.getElementById("emailAdress").textContent = user.email;
       document.getElementById("googlePic").src = user.photoURL;
       //document.getElementById("accountLogo").src=Content = user.email;
-      document.getElementById("accountLogo").textContent = " ";
-      document.getElementById("accountLogo").style.width = "1em";
-      document.getElementById("accountLogo").style.height = "1em";
-      document.getElementById("accountLogo").style.backgroundImage = 'url("' + user.photoURL + '")';
+      initAccountLogo(user);
+
       initDataUser(user);
    }).catch(function(error) {
       // Handle Errors
@@ -31,16 +30,42 @@ function googleLogin() {
    });
 }
 
+function initAccountLogo(user) {
+   document.getElementById("accountLogo").textContent = " ";
+   document.getElementById("accountLogo").style.width = "0.9em";
+   document.getElementById("accountLogo").style.height = "0.9em";
+   document.getElementById("accountLogo").style.backgroundImage = 'url("' + user.photoURL + '")';
+   document.getElementById("accountLogo").style.cursor = "default";
+   document.getElementById("userName").textContent = user.displayName;
+}
+
 function initDataUser(user) {
    console.log(user.uid);
    // Get a reference to the database service
    var database = firebase.database();
-   const ref = database.ref('/users/'+user.uid);
-   ref.set({
-      username: user.displayName,
-      email: user.email
-      //some more user data
+   database.ref('/users/' + user.uid).on('value', function(snapshot) {
+      if (!(snapshot.exists())) {
+         const ref = database.ref('/users/' + user.uid);
+         ref.set({
+            username: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+            membreNol: false
+         });
+      } //else
+         //alert("exist");
    });
+
+   /*if (database.ref('/users/' + user.uid). != null) {
+      const ref = database.ref('/users/' + user.uid);
+      ref.set({
+         username: user.displayName,
+         email: user.email,
+         photoURL: user.photoURL,
+         membreNol: false
+      });
+   }*/
+
    /*const ref = database.ref('/users/'+user.uid);
    ref.push({
       item: "Get Milk",

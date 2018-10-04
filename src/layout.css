@@ -48,6 +48,7 @@ body {
    text-align: center;
    display: block;
    padding-right: 0.4em;
+   cursor: default;
 }
 
 /*#accountLogo:hover{
@@ -143,6 +144,6 @@ p {
    color: white;
 }
 
-#cardReservation{
+#cardReservation {
    margin: 5em;
 }
