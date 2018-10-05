@@ -24,29 +24,43 @@
          <p id="userName"></p>
       </li>
    </ul>
+
+   <div class="responsiveDiv" id="fullCardDiv">
+
+   </div>
+
    <div class="responsiveDiv">
-      <div class="card" id="card1" onclick="maxCard('card1')">
-         <img src="lib\play.jpg" alt="Play" class="pic">
-         <div class="container">
-            <h4>Play</h4>
-            <p>Playlist collaborative & Production</p>
-         </div>
-      </div>
-      <div class="card" id="card2" onclick="maxCard('card2')">
-         <img src="lib\reservation.jpg" alt="Reservation" class="pic">
-         <div class="container">
-            <h4>Reservation</h4>
-            <p>Reservation du local</p>
+      <div id="column-card1">
+         <div class="card" id="card1" onclick="maxCard('card1')">
+            <img src="lib\play.jpg" alt="Play" class="pic">
+            <div class="container">
+               <h4>Play</h4>
+               <p>Playlist collaborative & Production</p>
+            </div>
          </div>
       </div>
 
-      <div class="card" id="card3" onclick="maxCard('card3')">
-         <img src="lib\nolimg.jpg" alt="Prestations" class="pic">
-         <div class="container">
-            <h4>Prestations</h4>
-            <p>Contact pour prestation</p>
+      <div id="column-card2">
+         <div class="card" id="card2" onclick="maxCard('card2')">
+            <img src="lib\reservation.jpg" alt="Reservation" id="imgCard2"class="pic">
+            <div class="container">
+               <h4>Reservation</h4>
+               <p>Reservation du local</p>
+            </div>
          </div>
       </div>
+
+      <div id="column-card3">
+         <div class="card" id="card3" onclick="maxCard('card3')">
+            <img src="lib\nolimg.jpg" alt="Prestations" class="pic">
+            <div class="container">
+               <h4>Prestations</h4>
+               <p>Contact pour prestation</p>
+            </div>
+         </div>
+      </div>
+
+
 
       <!--div class="card" id="card1">
          <img src="lib\reservation.jpg" alt="Prestations" class="pic">
