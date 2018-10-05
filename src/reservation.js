@@ -1,21 +1,3 @@
-/*function setupCalendars() {
-   // Embedded Calendar
-   /*Calendar.setup({
-      dateField: 'embeddedDateField',
-      parentElement: 'embeddedCalendar'
-   })*/
-
-// Popup Calendar
-/*Calendar.setup({
-      dateField: 'popupDateField',
-      triggerElement: 'popupDateField'
-   })
-}
-
-Event.observe(window, 'load', function() {
-   setupCalendars()
-})*/
-
 function tstReservation() {
    var date = document.getElementById("dateField").value;
    console.log(date);
@@ -96,9 +78,9 @@ function maxCard(objId) {
    //document.getElementById(objId).style.position = "relative";
    if (objId == 'card2') {
       maxCard2(objId);
-   }else if (objId == 'card1') {
+   } else if (objId == 'card1') {
       maxCard1(objId);
-   }else{
+   } else {
       maxCard3(objId);
    }
 }
@@ -106,7 +88,7 @@ function maxCard(objId) {
 function minCard(objId) {
    downScale(objId);
    //document.getElementById(objId).style.width = "30%";
-document.getElementById(("column-" + objId)).appendChild(document.getElementById(objId));
+   document.getElementById(("column-" + objId)).appendChild(document.getElementById(objId));
    document.getElementById(objId).onclick = function() {
       maxCard(objId);
    };;

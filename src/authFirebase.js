@@ -39,7 +39,7 @@ function initDataUser(user) {
    // console.log(user.uid);
    var database = firebase.database();
    database.ref('/users/' + user.uid).on('value', function(snapshot) {
-      if (!(snapshot.exists())) { // tst si première co ou pas
+            if (!(snapshot.exists())) { // tst si première co ou pas
          const ref = database.ref('/users/' + user.uid);
          ref.set({ // creation et sauvegarde du profil
             username: user.displayName,
