@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Nol</title>
+   <link rel="stylesheet" href="layout.css" />
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+   <script src="/nolweb/src/reservation.js"></script>
+
+   <ul>
+      <img src="/nolweb/lib/icoNol.png" alt="Avatar" id="logo" style="width:7%">
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="active" href="src\reservation.html">News</a></li>
+      <li><a href="/nolweb/index.html">Home</a></li>
+      <li><i class="material-icons md-4" id="accountLogo" onclick="googleLogin()">account_circle</i></li>
+      <li>
+         <p id="userName"></p>
+      </li>
+   </ul>
+
+   <div class="responsiveDiv">
+      <div class="cardReserv" id="cardReservId">
+         <!--img src="lib\play.jpg" alt="Play" class="pic"-->
+         <div class="containerReserv">
+            <input type="number" id="dateField" min="1" max="7">
+            <input type="number" id="horaire" min="10" max="20">
+            <p></p>
+            <button onclick="tstReservation()">Reserver</button>
+            <table>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+              </tr>
+            </table>
+         </div>
+         <br>
+
+      </div>
+   </div>
+
+
+   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+         apiKey: "AIzaSyCPulMoTiUblUOF4r-46sxgmQkAHEUrz98",
+         authDomain: "nolweb-8d12d.firebaseapp.com",
+         databaseURL: "https://nolweb-8d12d.firebaseio.com",
+         projectId: "nolweb-8d12d",
+         storageBucket: "",
+         messagingSenderId: "366427879385"
+      };
+      firebase.initializeApp(config);
+   </script>
+
+</body>
+
+</html>

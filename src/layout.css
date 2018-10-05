@@ -48,6 +48,7 @@ body {
    text-align: center;
    display: block;
    padding-right: 0.4em;
+   cursor: default;
 }
 
 /*#accountLogo:hover{
@@ -64,6 +65,7 @@ ul {
    top: 0;
    width: 100%;
    box-shadow: 0 1em 1.4em 0 rgba(0, 0, 0, 0.2);
+
 }
 
 li {
@@ -141,4 +143,28 @@ p {
    font-family: 'Roboto', sans-serif;
    font-size: 1.5vw;
    color: white;
+}
+/** RESERVATION**/
+.cardReserv {
+   box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.2);
+   transition: 0.3s;
+   width: 70%;
+   background-color: white;
+}
+
+.cardReserv:hover {
+   box-shadow: 0 1em 1.4em 0 rgba(0, 0, 0, 0.2);
+}
+
+.containerReserv {
+   padding: 0.5em 1em;
+}
+
+table {
+    width:5%;
+    color: blue;
+}
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
 }
